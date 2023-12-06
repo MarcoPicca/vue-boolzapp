@@ -40,12 +40,15 @@
                     <ul class="contact-list">
                         <li v-for="(contact, index) in contacts" :key="id" class="contact">
                             <img class="img-contact" :src="contacts[index].avatar" alt="">
+                            <div class="container-name">
+                                <span class="contact-name">{{ contacts[index].name }}</span>
+                            </div>    
                         </li>
                     </ul>
                 </div>
             </aside>
             <section class="container-current-contact-messages">
-                <div class="current-contact-messages-bar">
+                <div class="current-contact-messages-bar" @click="selectedContact()">
                     <div class="contact-img-name">
                         <img class="current-contact-messages-img" :src="contacts[0].avatar" alt="">
                     </div>
@@ -56,10 +59,10 @@
                     </div>
                 </div>
                 <div class="container-chat">
-                    <div class="message received">scrivi qualcosa</div>
-                    <div class="message sent">ok scrivo</div>
-                    <div class="message received">scrivi qualcosa</div>
-                    <div class="message sent">ok scrivo</div>
+                    <div class="message received" v-if="contacts[0].messages.status === 'received'" :key="id">{{ messageReceived() }}</div>
+                    <div class="message sent" v-else>{{ messageSent() }}</div>
+                    <!-- <div class="message received">scrivi qualcosa</div>
+                    <div class="message sent">ok scrivo</div> -->
                 </div>
             </section>
         </div>

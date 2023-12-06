@@ -181,7 +181,29 @@ createApp({
     },
 
     methods: {
+        realMessage(){
+           this.realMessage = this.contacts[0].messages.message;
+        },
 
+        statusReceived(){
+            this.statusReceived = this.contacts[0].messages.status('received');
+        },
+
+        statusSent(){
+            this.statusSent = this.contacts[0].messages.status('sent');
+        },
+
+        messageReceived(){
+            this.messageReceived = this.realMessage + this.statusReceived;
+        },
+
+        messageSent(){
+            this.messageSent = this.realMessage + this.statusSent;
+        },
+
+        selectedContact(){
+
+        }
     }
         
 

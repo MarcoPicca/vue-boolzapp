@@ -114,11 +114,23 @@
     background-color: rgb(237, 255, 211);
     border-radius: 5px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom: 1.5rem;
     vertical-align: middle;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container-name{
+    height: 100%;
+    width: 25%;
+    margin-top: 1rem;
+}
+
+.contact-name{
+    height: 40%;
+    width: 100%;
+    
 }
 
 .img-contact{
