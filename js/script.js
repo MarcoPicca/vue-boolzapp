@@ -182,15 +182,15 @@ createApp({
 
     methods: {
         realMessage(){
-           this.realMessage = this.contacts[0].messages.message;
+           this.realMessage = this.contacts[0].messages[index].message;
         },
 
         statusReceived(){
-            this.statusReceived = this.contacts[0].messages.status('received');
+            this.statusReceived = this.contacts[0].messages[index].status('received');
         },
 
         statusSent(){
-            this.statusSent = this.contacts[0].messages.status('sent');
+            this.statusSent = this.contacts[0].messages[index].status('sent');
         },
 
         messageReceived(){

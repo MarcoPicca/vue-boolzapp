@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="container-chat">
-                    <div class="message received" v-if="contacts[0].messages.status === 'received'" :key="id">{{ messageReceived() }}</div>
+                    <div class="message received" v-if="contacts[0].messages[0].status === 'received'" :key="contacts.id">{{ messageReceived() }}</div>
                     <div class="message sent" v-else>{{ messageSent() }}</div>
                     <!-- <div class="message received">scrivi qualcosa</div>
                     <div class="message sent">ok scrivo</div> -->
