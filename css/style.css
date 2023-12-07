@@ -38,7 +38,6 @@
 .container-profiles{
     width: 40%;
     height: 100%;
-    border-right: 1px solid black;
 }
 
 .user-profile-bar{
@@ -52,7 +51,6 @@
 .user-img-name{
     width: 18%;
     height: 100%;
-    border-right: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -74,7 +72,6 @@
 .container-user-icon{
     width: 18%;
     height: 100%;
-    border: 1px solid black;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -89,13 +86,11 @@
 .container-search-bar{
     width: 100%;
     height: 50px;
-    border-bottom: 1px solid black;
 }
 
 .container-contact{
     width: 100%;
     height: 72.9%;
-    border: 1px solid blue;
     background-color: #FFFFFF;
     overflow-y: auto;
 }
@@ -110,13 +105,12 @@
     width: 97%;
     height: 70px;
     margin: 0 auto;
-    border: 1px solid black;
     background-color: rgb(237, 255, 211);
     border-radius: 5px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     vertical-align: middle;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -142,7 +136,6 @@
 .container-current-contact-messages{
     width: 60%;
     height: 100%;
-    border: 1px solid black;
 }
 
 .current-contact-messages-bar{
@@ -155,7 +148,6 @@
 .contact-img-name{
     width: 25%;
     height: 100%;
-    border: 1px solid black;
     display: flex;
     align-items: center;
 }
@@ -170,7 +162,6 @@
 .icon-contact-messages-bar{
     width: 15%;
     height: 100%;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: space-around;

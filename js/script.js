@@ -5,6 +5,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            activeContact: 0,
             contacts: [
                 {
                     id: 1,
@@ -181,28 +182,10 @@ createApp({
     },
 
     methods: {
-        realMessage(){
-           this.realMessage = this.contacts[0].messages[index].message;
-        },
+        
 
-        statusReceived(){
-            this.statusReceived = this.contacts[0].messages[index].status('received');
-        },
-
-        statusSent(){
-            this.statusSent = this.contacts[0].messages[index].status('sent');
-        },
-
-        messageReceived(){
-            this.messageReceived = this.realMessage + this.statusReceived;
-        },
-
-        messageSent(){
-            this.messageSent = this.realMessage + this.statusSent;
-        },
-
-        selectedContact(){
-
+        selectedContact(index){
+            this.activeContact = index;
         }
     }
         
