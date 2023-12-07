@@ -5,6 +5,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            newMessage: '',
             activeContact: 0,
             contacts: [
                 {
@@ -182,11 +183,20 @@ createApp({
     },
 
     methods: {
-        
 
         selectedContact(index){
             this.activeContact = index;
-        }
+        },
+
+        addMessage(index) {
+            const newMessage = this.newMessage.trim();
+            if (newMessage !== '') {
+              this.contacts[index].messages.push({ message: newTask, status: 'sent', date: '10/01/2020 15:35:55' });
+              this.newMessage = '';
+            } else {
+                alert('Please add a valid Task');
+            }
+        },
     }
         
 
