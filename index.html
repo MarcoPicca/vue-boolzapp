@@ -70,7 +70,7 @@
                     <div class="icon-input-chat">
                         <i class="fa-regular fa-face-laugh fa-lg" style="color: #a1a1a1;"></i>
                     </div>
-                    <input class="new-message-sent" v-model="contacts[activeContact].newMessage" @keyup.enter="addMessage(index)" type="text" name="new-message-sent" id="" placeholder="Scrivi un nuovo messaggio">
+                    <input class="new-message-sent" v-model="newMessage" @keyup.enter="addMessage" type="text" name="new-message-sent" id="" placeholder="Scrivi un nuovo messaggio">
                     <div class="icon-input-chat"> 
                         <i class="fa-solid fa-microphone fa-lg" style="color: #a1a1a1;"></i>
                     </div>

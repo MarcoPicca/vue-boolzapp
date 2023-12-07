@@ -196,13 +196,13 @@ createApp({
             this.activeContact = index;
         },
 
-        addMessage(index) {
-            const newMessage = this.contacts.newMessage.trim();
+        addMessage() {
+            const newMessage = this.contacts[this.activeContact].newMessage.trim();
             if (newMessage !== '') {
-              this.contacts[index].messages.push({ message: newTask, status: 'sent' });
-              this.newMessage = '';
+                this.contacts[this.activeContact].messages.push({ message: newMessage, status: 'sent' });
+                this.contacts[this.activeContact].newMessage = '';
             } else {
-                alert('Please add a valid Task');
+                alert('Please add a valid message');
             }
         },
     }
