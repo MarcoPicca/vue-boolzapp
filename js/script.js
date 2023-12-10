@@ -202,6 +202,11 @@ createApp({
             if (newMessage !== '') {
                 this.contacts[this.activeContact].messages.push({ message: newMessage, status: 'sent' });
                 this.contacts[this.activeContact].newMessage = '';
+
+                setTimeout(() => {
+                    
+                    this.contacts[this.activeContact].messages.push({ message: "Io c'ero!", status: 'received' }); }, 1000);
+
             } else {
                 alert('Please add a valid message');
             }
