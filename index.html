@@ -25,15 +25,29 @@
                         <span id="user-name">Sofia</span>
                     </div>
                     <div class="container-user-icon">
-                        <i class="fa-solid fa-circle-notch fa-lg" style="color: #a1a1a1;"></i>                        <i class="fa-solid fa-message fa-lg" style="color: #a7a7a7;"></i>
+                        <i class="fa-solid fa-circle-notch fa-lg" style="color: #a1a1a1;"></i>                        
+                        <i class="fa-solid fa-message fa-lg" style="color: #a7a7a7;"></i>
                         <i class="fa-solid fa-ellipsis-vertical fa-lg" style="color: #bfbfbf;"></i>
                     </div>
                 </div>
                 <div class="container-bell-bar">
-
+                    <div class="container-bell">
+                        <i class="fa-solid fa-bell-slash fa-lg" style="color: #8edafc;"></i>
+                    </div>
+                    <div class="container-bell-text">
+                       <p class="bell-text">
+                            Ricevi notifiche di nuovi messaggi
+                       </p>
+                       <p class="active-notification">
+                            Attiva le notifiche su desktop
+                       </p> 
+                    </div>
                 </div>
-                <div class="container-search-bar">
-
+                <div class="container-chat-search-bar">
+                    <div class="container-icon-chat-search-bar">
+                        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #ababab;"></i>
+                    </div>
+                    <input class="chat-search" v-model="" @keyup.enter="" type="text" id="" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <div class="container-contact">
                     <ul class="contact-list">
@@ -63,14 +77,12 @@
                         <div class="message received" v-if="message.status === 'received'">{{ message.message }}</div>
                         <div class="message sent" v-else>{{ message.message }}</div>
                     </div>
-                        <!-- <div class="message received">scrivi qualcosa</div>
-                    <div class="message sent">ok scrivo</div> -->
                 </div>
                 <div class="container-input-chat">
                     <div class="icon-input-chat">
                         <i class="fa-regular fa-face-laugh fa-lg" style="color: #a1a1a1;"></i>
                     </div>
-                    <input class="new-message-sent" v-model="newMessage" @keyup.enter="addMessage" type="text" name="new-message-sent" id="" placeholder="Scrivi un nuovo messaggio">
+                    <input class="new-message-sent" v-model="contacts[activeContact].newMessage" @keyup.enter="addMessage" type="text" name="new-message-sent" id="" placeholder="Scrivi un nuovo messaggio">
                     <div class="icon-input-chat"> 
                         <i class="fa-solid fa-microphone fa-lg" style="color: #a1a1a1;"></i>
                     </div>

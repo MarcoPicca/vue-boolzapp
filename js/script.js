@@ -198,6 +198,7 @@ createApp({
 
         addMessage() {
             const newMessage = this.contacts[this.activeContact].newMessage.trim();
+            console.log(newMessage);
             if (newMessage !== '') {
                 this.contacts[this.activeContact].messages.push({ message: newMessage, status: 'sent' });
                 this.contacts[this.activeContact].newMessage = '';
