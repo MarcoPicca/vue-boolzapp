@@ -5,7 +5,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            
+            search: '';
             activeContact: 0,
             contacts: [
                 {
@@ -191,6 +191,10 @@ createApp({
     },
 
     methods: {
+
+        //  for each sull'array per confrontare il termine di ricerca inserito dall'utente con il nome dei contatti 
+        // filter js
+        // lezione filter map();
 
         selectedContact(index){
             this.activeContact = index;
