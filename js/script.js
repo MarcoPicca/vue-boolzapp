@@ -217,7 +217,7 @@ createApp({
         },
 
         filterContacts(filter){
-            this.contacts.foreach(contact => {
+            this.contacts.forEach(contact => {
                 if (contact.name.toLowerCase().includes(filter.trim().toLowerCase())) {
                     contact.visible = true;
                 } else {
