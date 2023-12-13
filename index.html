@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <div id="app">
         <div class="container-retro">
             <nav id="retro-nav"></nav>
@@ -47,11 +48,11 @@
                     <div class="container-icon-chat-search-bar">
                         <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #ababab;"></i>
                     </div>
-                    <input class="chat-search" v-model="search" @keyup.enter="" type="text" id="" placeholder="Cerca o inizia una nuova chat">
+                    <input class="chat-search" v-model="contactsSearchInput" @keyup="filterContacts(contactsSearchInput)" type="text" id="" placeholder="Cerca o inizia una nuova chat">
                 </div>
                 <div class="container-contact">
                     <ul class="contact-list">
-                        <li v-for="(contact, index) in contacts" :key="index"  @click="selectedContact(index)" class="contact" >
+                        <li v-for="(contact, index) in contacts" @click="selectedContact(index)"  class="contact" v-show="contact.visible" >
                             <img class="img-contact" :src="contacts[index].avatar" alt="">
                             <div class="container-name">
                                 <span class="contact-name">{{ contacts[index].name }}</span>
@@ -92,7 +93,7 @@
     </div>
     
     
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -5,8 +5,8 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            search: '';
             activeContact: 0,
+            contactsSearchInput: '',
             contacts: [
                 {
                     id: 1,
@@ -215,6 +215,16 @@ createApp({
                 alert('Please add a valid message');
             }
         },
+
+        filterContacts(filter){
+            this.contacts.foreach(contact => {
+                if (contact.name.toLowerCase().includes(filter.trim().toLowerCase())) {
+                    contact.visible = true;
+                } else {
+                    contact.visible = false;
+                }
+            });
+        }
     }
         
 
